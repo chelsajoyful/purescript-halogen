@@ -35,6 +35,7 @@ module Halogen.HTML.Properties
   , value
   , min
   , max
+  , maxlength
   , step
   , disabled
   , enabled
@@ -211,6 +212,9 @@ min = prop (PropName "min")
 
 max :: forall r i. Number -> IProp (max :: Number | r) i
 max = prop (PropName "max")
+
+maxlength :: forall r i. Number -> IProp (maxlength :: Number | r) i
+maxlength = prop (PropName "maxlength")
 
 step :: forall r i. I.StepValue -> IProp (step :: I.StepValue | r) i
 step = prop (PropName "step")
